@@ -28,8 +28,6 @@ public class pledgeController {
 
     @GetMapping("/pledges")
     public List<Pledge> getAllPledges() {
-        pledges.add(new Pledge(10, "Akshay", "I am a Coder"));
-        pledges.add(new Pledge(15, "Shivam", "He is a developer"));
         return pledges;
     }
 
