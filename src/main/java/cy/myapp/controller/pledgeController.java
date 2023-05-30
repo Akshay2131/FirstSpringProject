@@ -15,7 +15,7 @@ public class pledgeController {
 
     @GetMapping("/hello")
     public String getHelloMessage() {
-        return "Hello Wolrld!! From Spring";
+        return "Hello World!! From Spring";
     }
 
     @PostMapping("/pledges")
@@ -28,10 +28,11 @@ public class pledgeController {
 
     @GetMapping("/pledges")
     public List<Pledge> getAllPledges() {
+        pledges.add(new Pledge(20, "Ak", "I am a student"));
         return pledges;
     }
 
-    @GetMapping("/pledges/{id}")
+    @GetMapping("/pledges/")
     public Pledge getOnePledge(@PathVariable("id") long pledgeId) {
         for(Pledge pledge : pledges) {
             if(pledge.getId() == pledgeId) {
